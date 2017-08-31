@@ -14,9 +14,56 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!--
+    Need:
+        Wins
+        Losses
+        Target Number
+        Current Number
+        4x Crystals
+    -->
+    <!-- Title and Rules -->
+    <div class="jumbotron text-center">
+        <h1>Crystal Collector</h1>
+        <ul>
+            <li>Each crystal adds a hidden amount per click.</li>
+            <li>Match the numbers to win; go over and you lose.</li>
+            <li>The target value and crystal values will change between each game.</li>
+        </ul>
+    </div>
 
+    <!-- Game Board -->
+    <div class="container">
+        <div class="row">
+            <!-- Current Game -->
+            <div class="well col-xs-12 col-sm-8">
+                <h3>Target Number: <span id="spanTarget"></span></h3>
+                <h3>Current Total: <span id="spanCurrent"></span></h3>
 
-    <!-- JS file link & load -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- Crystals -->
+                        <input type="button" class="crystal" id="buttonCrystal1" data-value="">
+                        <input type="button" class="crystal" id="buttonCrystal2" data-value="">
+                        <input type="button" class="crystal" id="buttonCrystal3" data-value="">
+                        <input type="button" class="crystal" id="buttonCrystal4" data-value="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacer div -->
+            <div class="col-xs-12 col-sm-1"></div>
+
+            <!-- Scoreboard -->
+            <div class="well col-xs-12 col-sm-3">
+                <h3>Wins: <span id="spanWins"></span></h3>
+                <h3>Losses: <span id="spanLosses"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery & JS links & load -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
